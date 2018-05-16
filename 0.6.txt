@@ -1,0 +1,6 @@
+title 0.6 SPA: Uuden muistiinpanon luominen
+
+kayttaja->selain: Käyttäjä täyttää tekstikentän ja painaa "Tallenna" painiketta
+note left of selain: JS koodi estää HTML-lomakkeen oletustoiminnon, tyhjää tekstikentän,  lisää muistiinpanon notes arrayhyn ja muodostaa uudestaan muistiinpanojen HTML elementit
+selain->palvelin: POST /new_note_spa, Body: uuden muistiinpanon JSON muotoiset tiedot
+palvelin->selain: Status 201, Body: JSON muotoinen ilmoitus muistiinpanon luonnista
