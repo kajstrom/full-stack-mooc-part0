@@ -1,0 +1,6 @@
+title 0.4 Uusi muistiinpano
+
+kayttaja->selain: Käyttäjä täyttää tekstikentän ja painaa "Tallenna" painiketta
+selain->palvelin: POST /new_note, Body: lomakkeen sisältö, eli "note" kenttä
+palvelin->selain: Status: 302 Location /notes.
+note right of selain: Selain siirtyy Redirect vastausstatusta noudattaen sivulle /notes.Tästä alkaa uudestaan 0.3 mukainen kulku.
