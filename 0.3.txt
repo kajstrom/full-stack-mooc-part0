@@ -1,0 +1,27 @@
+title 0.3 muistiinpanojen sivu
+
+
+kayttaja->selain: seuraa linkkiä muistiinpanojen sivulle
+
+selain->palvelin: GET fullstack-exampleapp.herokuapp.com/notes
+
+note left of palvelin: Muistiinpanojen HTML on staattinen, palvelin ei tee sille käsittelyä.
+
+palvelin->selain: Status 200 OK, muistiinpanojen HTML
+
+selain->palvelin: GET main.css
+
+palvelin->selain: Status 200 OK, main.css tyylitiedoston sisältö
+
+note right of selain: Selain näyttää CSS-tyylitellyn HTML dokumentin
+
+selain->palvelin: GET main.js
+
+palvelin->selain: Status 200 OK, main.js tiedoston sisältö
+
+note right of selain: Selain suorittaa main.js tiedoston JS-koodin
+selain->palvelin: GET data.json
+
+palvelin->selain: Status 200 OK, muistiinpanojen JSON rakenteet
+
+note right of selain: Selain suorittaa AJAX-pyynnön tapahtumankäsittelijän ja JS-koodi muodostaa muistiinpanojen HTML-elementit
