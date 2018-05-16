@@ -1,0 +1,13 @@
+title 0.5 SPA
+
+kayttaja->selain: Käyttäjä navigoi osoitteeseen fullstack-exampleapp.herokuapp.com/spa
+selain->palvelin: GET fullstack-exampleapp.herokuapp.com/spa
+palvelin->selain: Status 200, spa-sivun HTML-rakenne
+selain->palvelin: GET /main.css
+palvelin->selain: Status 200, main.css tiedoston sisältö.
+selain->palvelin: GET /spa.js
+palvelin->selain: Status 200, spa.js tiedoston sisältö
+note right of selain: Selain suorittaa spa.js:n JS koodin
+selain->palvelin: GET /data.json
+palvelin->selain: Status 200, muistiinpanojen JSON rakenteet
+note right of selain: Selain suorittaa onreadystatechange event listenerin joka muodostaa muistiinpanojen HTML elementit sivulle
